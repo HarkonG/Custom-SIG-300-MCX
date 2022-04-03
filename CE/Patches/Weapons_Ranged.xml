@@ -13,8 +13,8 @@
                 <li Class="PatchOperationReplace">
                     <xpath>
 				    /Defs/ThingDef[
-					defName = "GN_GreyMCX" or
-					defName = "GN_TanMCX"]/tools
+					defName = "HRK_MCX_C_A" or
+					defName = "HRK_MCX_C_B"]/tools
                     </xpath>
                     <value>
                         <tools>
@@ -53,9 +53,9 @@
                     </value>
                 </li>
 
-                <!--===== GN_GreyMCX =====-->
+                <!--===== HRK_MCX_C_A =====-->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_GreyMCX</defName>
+                    <defName>HRK_MCX_C_A</defName>
                     <statBases>
                         <WorkToMake>30500</WorkToMake>
                         <SightsEfficiency>1</SightsEfficiency>
@@ -78,7 +78,7 @@
                         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
                         <warmupTime>0.5</warmupTime>
                         <range>35</range>
-                        <soundCast>GN_Shot_MCX</soundCast>
+                        <soundCast>HRK_Shot_SD_MCX</soundCast>
                         <soundCastTail>GunTail_Medium</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
                         <recoilAmount>2.2</recoilAmount>
@@ -98,9 +98,9 @@
                     </weaponTags>
                 </li>
 
-                <!--===== GN_TanMCX =====-->
+                <!--===== HRK_MCX_C_B =====-->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_TanMCX</defName>
+                    <defName>HRK_MCX_C_B</defName>
                     <statBases>
                         <WorkToMake>35500</WorkToMake>
                         <SightsEfficiency>1.1</SightsEfficiency>
@@ -123,7 +123,7 @@
                         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
                         <warmupTime>0.5</warmupTime>
                         <range>37</range>
-                        <soundCast>GN_Shot_MCX</soundCast>
+                        <soundCast>HRK_Shot_SD_MCX</soundCast>
                         <soundCastTail>GunTail_Medium</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
                         <recoilAmount>2.1</recoilAmount>

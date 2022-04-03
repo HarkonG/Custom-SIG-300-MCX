@@ -2,29 +2,13 @@
 
 <Defs>
 
-  <!--===== .300 Blackout =====-->
-  <ThingDef ParentName="BaseBullet">
-    <defName>GN_Bullet_300Blackout</defName>
-    <label>.300 Blackout bullet</label>
-    <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>11</damageAmountBase>
-      <speed>70</speed>
-      <armorPenetrationBase>0.2</armorPenetrationBase>
-    </projectile>
-  </ThingDef>
-
   <!--===== Sig MCX =====-->
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>GN_GreyMCX</defName>
-    <label>Sig MCX</label>
-    <description>_</description>
+    <defName>HRK_MCX_C_A</defName>
+    <label>SIG MCX (custom)</label>
+    <description>The SIG MCX is a family of firearms designed and manufactured by SIG Sauer, produced in both selective fire and semi-automatic only models, and features a short-stroke gas piston system, which is inherited from the earlier SIG MPX submachine gun.</description>
     <graphicData>
-      <texPath>Things/Weapons/GN_GreyMCX</texPath>
+      <texPath>Things/Weapons/HRK_MCX_C_A</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>45</equippedAngleOffset>
@@ -33,7 +17,7 @@
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-      <researchPrerequisite>GN_Research</researchPrerequisite>
+      <researchPrerequisite>HRK_Research_GunNut</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -55,12 +39,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_300Blackout</defaultProjectile>
+        <defaultProjectile>HRK_Bullet_300AACBlackout</defaultProjectile>
         <warmupTime>0.8</warmupTime>
         <range>24</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-        <soundCast>GN_Shot_MCX</soundCast>
+        <soundCast>HRK_Shot_SD_MCX</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -84,25 +68,18 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-    <thingCategories Inherit="False">
-      <li>GunNut</li>
-    </thingCategories>
     <weaponTags Inherit="False">
       <li>IndustrialGunAdvanced</li>
     </weaponTags>
-    <thingSetMakerTags Inherit="False">
-      <li>RewardStandardMidFreq</li>
-      <li>RewardStandardQualitySuper</li>
-    </thingSetMakerTags>
   </ThingDef>
 
-  <!--===== SIG MCX Extended =====-->
+  <!--===== SIG MCXL =====-->
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>GN_TanMCX</defName>
-    <label>SIG MCX Extended</label>
-    <description>_</description>
+    <defName>HRK_MCX_C_B</defName>
+    <label>SIG MCXL (custom)</label>
+    <description>The SIG MCX is a family of firearms designed and manufactured by SIG Sauer, produced in both selective fire and semi-automatic only models, and features a short-stroke gas piston system, which is inherited from the earlier SIG MPX submachine gun.</description>
     <graphicData>
-      <texPath>Things/Weapons/GN_TanMCX</texPath>
+      <texPath>Things/Weapons/HRK_MCX_C_B</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>45</equippedAngleOffset>
@@ -111,7 +88,7 @@
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-      <researchPrerequisite>GN_Research</researchPrerequisite>
+      <researchPrerequisite>HRK_Research_GunNut</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
@@ -133,12 +110,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_300Blackout</defaultProjectile>
+        <defaultProjectile>HRK_Bullet_300AACBlackout</defaultProjectile>
         <warmupTime>0.8</warmupTime>
         <range>26</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-        <soundCast>GN_Shot_MCX</soundCast>
+        <soundCast>HRK_Shot_SD_MCX</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -162,16 +139,9 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-    <thingCategories Inherit="False">
-      <li>GunNut</li>
-    </thingCategories>
     <weaponTags Inherit="False">
       <li>IndustrialGunAdvanced</li>
     </weaponTags>
-    <thingSetMakerTags Inherit="False">
-      <li>RewardStandardMidFreq</li>
-      <li>RewardStandardQualitySuper</li>
-    </thingSetMakerTags>
-  </ThingDef> 
+  </ThingDef>
 
 </Defs>
