@@ -1,149 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
 
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Combat Extended</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <operations>
-
-                <!--===== TOOLS FOR THE TOOL GOD =====-->
-                <li Class="PatchOperationReplace">
-                    <xpath>
+            <!--===== TOOLS FOR THE TOOL GOD =====-->
+            <li Class="PatchOperationReplace">
+                <xpath>
 				    /Defs/ThingDef[
 					defName = "HRK_MCX_C_A" or
 					defName = "HRK_MCX_C_B"]/tools
-                    </xpath>
-                    <value>
-                        <tools>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>stock</label>
-                                <capacities>
-                                    <li>Blunt</li>
-                                </capacities>
-                                <power>8</power>
-                                <cooldownTime>1.55</cooldownTime>
-                                <chanceFactor>1.5</chanceFactor>
-                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
-                            </li>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>barrel</label>
-                                <capacities>
-                                    <li>Blunt</li>
-                                </capacities>
-                                <power>5</power>
-                                <cooldownTime>2.02</cooldownTime>
-                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
-                            </li>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>muzzle</label>
-                                <capacities>
-                                    <li>Poke</li>
-                                </capacities>
-                                <power>8</power>
-                                <cooldownTime>1.55</cooldownTime>
-                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
-                            </li>
-                        </tools>
-                    </value>
-                </li>
+                </xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>barrel</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>5</power>
+                            <cooldownTime>2.02</cooldownTime>
+                            <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>muzzle</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
 
-                <!--===== HRK_MCX_C_A =====-->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_MCX_C_A</defName>
-                    <statBases>
-                        <WorkToMake>30500</WorkToMake>
-                        <SightsEfficiency>1</SightsEfficiency>
-                        <ShotSpread>0.16</ShotSpread>
-                        <SwayFactor>0.89</SwayFactor>
-                        <Bulk>6.10</Bulk>
-                        <Mass>4.70</Mass>
-                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
-                    </statBases>
-                    <costList>
-                        <Steel>30</Steel>
-                        <ComponentIndustrial>4</ComponentIndustrial>
-                        <Chemfuel>10</Chemfuel>
-                    </costList>
-                    <Properties>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_300AACBlackout_FMJ</defaultProjectile>
-                        <burstShotCount>6</burstShotCount>
-                        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-                        <warmupTime>0.5</warmupTime>
-                        <range>35</range>
-                        <soundCast>HRK_Shot_SD_MCX</soundCast>
-                        <soundCastTail>GunTail_Medium</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                        <recoilAmount>2.2</recoilAmount>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>30</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_300AACBlackout</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiAimMode>Snapshot</aiAimMode>
-                        <aiUseBurstMode>True</aiUseBurstMode>
-                        <aimedBurstShotCount>3</aimedBurstShotCount>
-                    </FireModes>
-                    <weaponTags>
-                        <li>CE_AI_Rifle</li>
-                    </weaponTags>
-                </li>
+            <!--===== HRK_MCX_C_A =====-->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_MCX_C_A</defName>
+                <statBases>
+                    <WorkToMake>30500</WorkToMake>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <ShotSpread>0.16</ShotSpread>
+                    <SwayFactor>0.89</SwayFactor>
+                    <Bulk>6.10</Bulk>
+                    <Mass>4.70</Mass>
+                    <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                </statBases>
+                <costList>
+                    <Steel>30</Steel>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <Chemfuel>10</Chemfuel>
+                </costList>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>True</hasStandardCommand>
+                    <defaultProjectile>Bullet_300AACBlackout_FMJ</defaultProjectile>
+                    <burstShotCount>6</burstShotCount>
+                    <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                    <warmupTime>0.5</warmupTime>
+                    <range>35</range>
+                    <soundCast>HRK_Shot_SD_MCX</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                    <recoilAmount>2.2</recoilAmount>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>30</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_300AACBlackout</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>Snapshot</aiAimMode>
+                    <aiUseBurstMode>True</aiUseBurstMode>
+                    <aimedBurstShotCount>3</aimedBurstShotCount>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_Rifle</li>
+                </weaponTags>
+            </li>
 
-                <!--===== HRK_MCX_C_B =====-->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_MCX_C_B</defName>
-                    <statBases>
-                        <WorkToMake>35500</WorkToMake>
-                        <SightsEfficiency>1.1</SightsEfficiency>
-                        <ShotSpread>0.16</ShotSpread>
-                        <SwayFactor>0.87</SwayFactor>
-                        <Bulk>6.10</Bulk>
-                        <Mass>4.70</Mass>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                    </statBases>
-                    <costList>
-                        <Steel>40</Steel>
-                        <ComponentIndustrial>5</ComponentIndustrial>
-                        <Chemfuel>15</Chemfuel>
-                    </costList>
-                    <Properties>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_300AACBlackout_FMJ</defaultProjectile>
-                        <burstShotCount>6</burstShotCount>
-                        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-                        <warmupTime>0.5</warmupTime>
-                        <range>37</range>
-                        <soundCast>HRK_Shot_SD_MCX</soundCast>
-                        <soundCastTail>GunTail_Medium</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                        <recoilAmount>2.1</recoilAmount>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>30</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_300AACBlackout</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiAimMode>Snapshot</aiAimMode>
-                        <aiUseBurstMode>True</aiUseBurstMode>
-                        <aimedBurstShotCount>3</aimedBurstShotCount>
-                    </FireModes>
-                    <weaponTags>
-                        <li>CE_AI_Rifle</li>
-                    </weaponTags>
-                </li>
+            <!--===== HRK_MCX_C_B =====-->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_MCX_C_B</defName>
+                <statBases>
+                    <WorkToMake>35500</WorkToMake>
+                    <SightsEfficiency>1.1</SightsEfficiency>
+                    <ShotSpread>0.16</ShotSpread>
+                    <SwayFactor>0.87</SwayFactor>
+                    <Bulk>6.10</Bulk>
+                    <Mass>4.70</Mass>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                </statBases>
+                <costList>
+                    <Steel>40</Steel>
+                    <ComponentIndustrial>5</ComponentIndustrial>
+                    <Chemfuel>15</Chemfuel>
+                </costList>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>True</hasStandardCommand>
+                    <defaultProjectile>Bullet_300AACBlackout_FMJ</defaultProjectile>
+                    <burstShotCount>6</burstShotCount>
+                    <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                    <warmupTime>0.5</warmupTime>
+                    <range>37</range>
+                    <soundCast>HRK_Shot_SD_MCX</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                    <recoilAmount>2.1</recoilAmount>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>30</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_300AACBlackout</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>Snapshot</aiAimMode>
+                    <aiUseBurstMode>True</aiUseBurstMode>
+                    <aimedBurstShotCount>3</aimedBurstShotCount>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_Rifle</li>
+                </weaponTags>
+            </li>
 
-            </operations>
-        </match>
+        </operations>
     </Operation>
 </Patch>
