@@ -5,7 +5,7 @@
     <SoundDef>
         <defName>HRK_Shot_SD_MCX</defName>
         <context>MapOnly</context>
-        <eventNames />
+        <eventNames/>
         <maxSimultaneous>1</maxSimultaneous>
         <subSounds>
             <li>
