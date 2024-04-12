@@ -6,6 +6,7 @@
 	<packageId>Harkon.Other.SigMCX</packageId>
 	<supportedVersions>		
 		<li>1.4</li>
+<li>1.5</li>
 	</supportedVersions>
 	<description>
 	Custom SIG .300 MCX
